@@ -14,12 +14,10 @@ def get_sql_config():
     sql_config = {key:dotenv_dict[key] for key in needed_keys if key in dotenv_dict}
     return sql_config
 
-# Import sqlalchemy and pandas - do this only when instructed
 import pandas as pd
 import sqlalchemy 
 
 
-# Insert the get_data() function definition below - do this only when instructed in the notebook
 def get_data(query):
    ''' Connect to the PostgreSQL database server, run query and return data'''
     # get the connection configuration dictionary using the get_sql_config function
@@ -33,7 +31,7 @@ def get_data(query):
       results = conn.execute(query)
    return results.fetchall()
 
-# Insert the get_dataframe() function definition below - do this only when instructed in the notebook
+
 def get_dataframe(sql_query):
     ''' 
     Connect to the PostgreSQL database server, 
@@ -48,7 +46,7 @@ def get_dataframe(sql_query):
     # open a conn session using 'with', execute the query, and return the results
     return pd.read_sql_query(sql= sql_query, con=engine)
 
-# Insert the get_engine() function definition below - when instructed # function to create sqlalchemy engine for writing data to a database
+# function to create sqlalchemy engine for writing data to a database
 def get_engine():
     sql_config = get_sql_config()
     engine = sqlalchemy.create_engine('postgresql://user:pass@host/database',
