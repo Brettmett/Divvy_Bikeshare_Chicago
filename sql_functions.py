@@ -78,7 +78,6 @@ def get_data_mod(mod_query):
 # additional import of the geopandas package
 import geopandas as gpd
 
-# numpy, "numerical python" - we'll cover this in the following notebooks.
 import numpy as np
 
 # shapely.geometry      Package shapely.geomerty is usefull to for checking, weather a point is inside a polygon and converting string type
