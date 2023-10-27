@@ -109,8 +109,8 @@ def get_bifi(df_trips):
     '''
     Input:  trips dataframe
     Output: returns a Dataframe with columns "area_number" and "rent_return_index", where rent_return_index is the difference between
-            total number of trips with specific district as destination and the total number of trips with specific district as starting point
-            A negative number indicates, that there more bikes/trips Leaving the area than comming in.'''
+            total number of trips ending in a district and the total number of trips strarting in a district. 
+            A negative number indicates, that there are more bikes/trips Leaving the area than comming in.'''
     df_rent_return = pd.DataFrame((df_trips["end_area_number"].value_counts() - df_trips["start_area_number"].value_counts()))
     df_rent_return.reset_index(inplace=True)
     df_rent_return.columns = ["area_number", "bifi_index"]
