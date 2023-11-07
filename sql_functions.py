@@ -126,3 +126,14 @@ def get_bifi(df_trips):
         if df_rent_return["isna"][i] == True:
                 df_rent_return.loc[i,"bifi_index"] = (df_trips[df_trips["end_area_number"] == area_number]).shape[0] - (df_trips[df_trips["start_area_number"] == area_number]).shape[0]
     return df_rent_return
+
+
+# Same as before, but this time there is no "new_geometry" column created, instead,
+# the columns holding the geometry is converted directly.
+
+def to_gdf_new(dataframe, geometry_column):
+    '''Input: DataFrame and the Column that has the geometry stored as a string
+        Output: geodataframe, with added column named "new_geometry" '''
+    dataframe[str(geometry_column)] = gpd.GeoSeries.from_wkt(dataframe[str(geometry_column)])
+    gdf = gpd.GeoDataFrame(dataframe, geometry=str(geometry_column),crs="WGS 84")
+    return gdf
