@@ -1,4 +1,6 @@
 # Divvy_Bikeshare_Chicago
+To be able to see all the Visualizations in the Notebooks, use this Link:
+[Notebook Viewer](https://nbviewer.org/github/Brettmett/Divvy_Bikeshare_Chicago/tree/main/)
 
 ## Data Sources
 - Divvy Tripdata: [Divvy Trip Data](https://divvy-tripdata.s3.amazonaws.com/index.html)
