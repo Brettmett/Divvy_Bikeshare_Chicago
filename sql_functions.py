@@ -137,3 +137,11 @@ def to_gdf_new(dataframe, geometry_column):
     dataframe[str(geometry_column)] = gpd.GeoSeries.from_wkt(dataframe[str(geometry_column)])
     gdf = gpd.GeoDataFrame(dataframe, geometry=str(geometry_column),crs="WGS 84")
     return gdf
+
+
+# Check for national US holidays. If the day is a holiday, the function returns True
+def is_holiday(date:str):
+    assert isinstance(date, str), "Please enter a date as String in the Format YYYY-MM-DD."
+    cal = USFederalHolidayCalendar()
+    holidays = cal.holidays(start='2020-01-01', end='2023-12-31')
+    return date in holidays
