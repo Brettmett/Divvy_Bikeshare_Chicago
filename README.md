@@ -2,6 +2,9 @@
 
 This project focusses on the analysis of data from a bike sharing company called Divvy located in Chicago. 
 
+To be able to see all the Visualizations in the Notebooks, use this Link:
+[Notebook Viewer](https://nbviewer.org/github/Brettmett/Divvy_Bikeshare_Chicago/tree/main/)
+
 In the following, i will give a short introduction for every Notebook in this repository.
 
 #### Notebook: 01_get_trip_data
@@ -18,7 +21,7 @@ In the following, i will give a short introduction for every Notebook in this re
     * 5. Upload to SQL database
 
 #### Notebook: 01_get_geodata_districts_chicago
-Creating a GeoPandas GeoDataFrame for all districts of Chicago. These shapely Polygon will be the basis for any interactive maps of Chicago i will be creating in this Project.
+Creating a GeoPandas GeoDataFrame for all districts of Chicago. These shapely Polygons will be the basis for any interactive maps of Chicago i will be creating in this Project.
 
     * 1. Loading data into DataFrame
     * 2. Cleaning Data
