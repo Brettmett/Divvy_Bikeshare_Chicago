@@ -27,10 +27,10 @@ Creating a GeoPandas GeoDataFrame for all districts of Chicago. These shapely Po
     * 5. Visualizing District areas on interactive map
     * 6. Upload to SQL Database
 
-#### Notebook: get_socioeconomic_data
-    1. Downloading Census data of the city of chicago from 2016 to 2020
-    2. Cleaning Data
-    3. Upload to SQL Database and save as csv on localy
+#### Notebook: 01_get_socioeconomic_data
+    * 1. Downloading Census data of the city of chicago from 2016 to 2020
+    * 2. Cleaning Data
+    * 3. Upload to SQL Database and save as csv on localy
 
 #### Notebook: 02_merge_areas_trips_data
 Goal: For every Trip in 2022, i want to identify the community area the trip started in and where it ended. Then, i want to add this information to the trips table for every trip.
