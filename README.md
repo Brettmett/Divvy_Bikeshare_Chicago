@@ -5,7 +5,7 @@ This project focusses on the analysis of data from a bike sharing company called
 To be able to see all the Visualizations in the Notebooks, use this Link:
 [Notebook Viewer](https://nbviewer.org/github/Brettmett/Divvy_Bikeshare_Chicago/tree/main/)
 
-In the following, i will give a short introduction for every Notebook in this repository.
+In the following, I will give a short introduction for every Notebook in this repository.
 
 #### Notebook: 01_get_trip_data
     * 1. Unzip monthly tripdata 
@@ -21,7 +21,7 @@ In the following, i will give a short introduction for every Notebook in this re
     * 5. Upload to SQL database
 
 #### Notebook: 01_get_geodata_districts_chicago
-Creating a GeoPandas GeoDataFrame for all districts of Chicago. These shapely Polygons will be the basis for any interactive maps of Chicago i will be creating in this Project.
+Creating a GeoPandas GeoDataFrame for all districts of Chicago. These shapely Polygons will be the basis for any interactive maps of Chicago I will be creating in this Project.
 
     * 1. Loading data into DataFrame
     * 2. Cleaning Data
@@ -36,7 +36,7 @@ Creating a GeoPandas GeoDataFrame for all districts of Chicago. These shapely Po
     * 3. Upload to SQL Database and save as csv on localy
 
 #### Notebook: 02_merge_areas_trips_data
-Goal: For every Trip in 2022, i want to identify the community area the trip started in and where it ended. Then, i want to add this information to the trips table for every trip.
+Goal: For every Trip in 2022, I want to identify the community area the trip started in and where it ended. Then, I want to add this information to the trips table for every trip.
 
     * 1. For every trip, take "start_lat" and "start_lon", and create a Geometrical Point
     * 2. Do the same thing with end_lat and end_lon.
@@ -55,9 +55,9 @@ Goal: Calculate linear distance from start to end point for every trip in 2022
     * 4. Basic visualization (Distribution of linear distances of all Trips)
 
 #### Notebook: 04_bikeflow_index
-Goal: I want to find general tendencies of the fleet movement over time through the City of Chicago. For that, i will create and calculate the Bikeflow-Index for every District of Chicago:
+Goal: I want to find general tendencies of the fleet movement over time through the City of Chicago. For that, I will create and calculate the Bikeflow-Index for every District of Chicago:
 
-The Bikeflow-Index is a positive or negative number, depending on whether a district "loses" or "gains" Bikes over a specific time period. The Bikeflow-Index for a specific District is calculated by adding up all trips that end in this district and substracting the number of trips starting in this district. That way, trips that start and end in the same district, don't have any effect on the Bikeflow-Index.
+The Bikeflow-Index is a positive or negative number, depending on whether a district "loses" or "gains" Bikes over a specific time period. The Bikeflow-Index for a specific district is calculated by adding up all trips that end in this district and substracting the number of trips starting in this district. That way, trips that start and end in the same district, don't have any effect on the Bikeflow-Index.
 
 A District with a strong negative Bikeflow Index needs to be resupplied with bikes from districts with positive Bikeflow indexes.
 
